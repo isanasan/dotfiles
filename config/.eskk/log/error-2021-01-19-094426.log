@@ -1,0 +1,79 @@
+Please report this error to author.
+`:help eskk` to see author's e-mail address.
+
+2021/01/19 9:44:26
+
+--- char ---
+char: ''(0)
+mode(): i
+--- char ---
+
+--- exception ---
+exception type: Vim internal error
+v:exception: Can't read 'C:\Users\im000556\.skk-jisyo'!
+v:throwpoint: function eskk#filter[75]..<SNR>218_asym_filter[50]..<SNR>218_do_henkan[17]..<SNR>218_do_henkan_other[56]..<SNR>240_Dictionary_refer[13]..<SNR>240_PhysicalDict_update_lines[9]..<SNR>240_PhysicalDict_update_lines_main, 行 2
+
+   function <SNR>240_PhysicalDict_update_lines_main() abort dict
+1      unlockvar 1 self._content_lines
+2      let self._content_lines  = readfile(self.path)
+3      lockvar 1 self._content_lines
+4      call self.parse_lines()
+5   
+6      let self._ftime_at_set = getftime(self.path)
+   endfunction
+--- exception ---
+
+--- preedit ---
+(no preedit)
+--- preedit ---
+
+--- Vim's :version ---
+VIM - Vi IMproved 8.2 (2019 Dec 12, compiled Dec 12 2019 13:19:27)
+MS-Windows 32 ビット コンソール 版
+Compiled by mool@tororo
+Huge 版 without GUI.  機能の一覧 有効(+)/無効(-)
++acl               +cmdline_hist      +ex_extra          +lambda            -mzscheme          +rightleft         +termguicolors     +viminfo
++arabic            +cmdline_info      +extra_search      +langmap           -netbeans_intg     -ruby              +terminal          +vreplace
++autocmd           +comments          -farsi             +libcall           +num64             +scrollbind        -termresponse      +vtp
++autochdir         +conceal           +file_in_path      +linebreak         +packages          +signs             +textobjects       +wildignore
++autoservername    +cryptv            +find_in_path      +lispindent        +path_extra        +smartindent       +textprop          +wildmenu
+-balloon_eval      +cscope            +float             +listcmds          -perl              +sound             -tgetent           +windows
++balloon_eval_term +cursorbind        +folding           +localmap          +persistent_undo   +spell             +timers            +writebackup
+-browse            +cursorshape       -footer            -lua               +popupwin          +startuptime       +title             -xfontset
+++builtin_terms    +dialog_con        +gettext/dyn       +menu              -postscript        +statusline        -toolbar           -xim
++byte_offset       +diff              -hangul_input      +mksession         +printer           -sun_workshop      +user_commands     -xpm_w32
++channel           +digraphs          +iconv/dyn         +modify_fname      +profile           +syntax            +vartabs           -xterm_save
++cindent           -dnd               +insert_expand     +mouse             -python            +tag_binary        +vertsplit         
++clientserver      -ebcdic            +job               -mouseshape        -python3           -tag_old_static    +virtualedit       
++clipboard         +emacs_tags        +jumplist          +multi_byte        +quickfix          -tag_any_white     +visual            
++cmdline_compl     +eval              +keymap            +multi_lang        +reltime           -tcl               +visualextra       
+      システム vimrc: "$VIM\vimrc"
+      ユーザー vimrc: "$HOME\_vimrc"
+   第2ユーザー vimrc: "$HOME\vimfiles\vimrc"
+   第3ユーザー vimrc: "$VIM\_vimrc"
+       ユーザー exrc: "$HOME\_exrc"
+    第2ユーザー exrc: "$VIM\_exrc"
+  デフォルトファイル: "$VIMRUNTIME\defaults.vim"
+コンパイル: cl -c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_CSCOPE -DFEAT_TERMINAL -DFEAT_SOUND  -DFEAT_JOB_CHANNEL      -DWINVER=0x0501 -D_WIN32_WINNT=0x0501 /MP -DHAVE_STDINT_H /Ox /GL -DNDEBUG /arch:IA32 /Zl /MT -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_HUGE /Fd.\ObjCi386/ /Zi
+リンク: link  /nologo /opt:ref /LTCG:STATUS oldnames.lib kernel32.lib advapi32.lib shell32.lib gdi32.lib  comdlg32.lib ole32.lib netapi32.lib uuid.lib /machine:i386   libcmt.lib  user32.lib          winmm.lib WSock32.lib  /PDB:vim.pdb -debug
+--- Vim's :version ---
+
+
+--- feature-list ---
+gui_running = 0
+unix = 0
+mac = 0
+macunix = 0
+win16 = 0
+win32 = 1
+win64 = 0
+win32unix = 0
+win95 = 0
+amiga = 0
+beos = 0
+dos16 = 0
+dos32 = 0
+os2 = 0
+qnx = 0
+vms = 0
+--- feature-list ---

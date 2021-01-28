@@ -1,0 +1,5 @@
+Yoman	:CtrlPYo
+ドキュメントフォーマット	:LspDocumentFormat
+ドキュメントシンボル	:CtrlPLspDocumentSymbol
+ワークスペースシンボル	:CtrlPLspWorkspaceSymbol
+端末	:botright terminal
