@@ -1,0 +1,144 @@
+setglobal fileformat=unix
+setglobal formatoptions+=mb
+
+if has('nvim')
+	let g:python3_host_prog = 'python'
+endif
+
+set nocompatible
+set enc=utf-8
+if exists('&ambw')
+	set ambiwidth=single
+endif
+" set fencs=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16,default
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+" 改行コード自動判別
+" set fileformats=unix,dos,mac
+"文字コードをUFT-8に設定
+"scriptencoding utf-8
+"" バックアップファイルを作らない
+set nobackup
+"" スワップファイルを作らない
+set noswapfile
+"" 編集中のファイルが変更されたら自動で読み直す
+set autoread
+"" バッファが編集中でもその他のファイルを開けるように
+set hidden
+"" 入力中のコマンドをステータスに表示する
+set showcmd
+" クリップボードを使う
+set clipboard+=unnamed
+
+" 挿入モードでバックスペースで削除できるようにする
+set backspace=indent,eol,start
+
+"" コマンドラインの補完
+set wildmode=list:longest
+
+let g:plug_shallow = 0
+
+call plug#begin('~/.vim/plugged')
+
+	Plug 'vim-jp/vimdoc-ja'
+
+	" 見た目関係
+	Plug 'cocopon/iceberg.vim'
+	Plug 'ulwlu/elly.vim'
+	Plug 'itchyny/lightline.vim'
+
+	" markdown
+	Plug 'plasticboy/vim-markdown'
+
+	" filetree
+	Plug 'lambdalisue/nerdfont.vim'
+	Plug 'lambdalisue/fern.vim'
+	Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+
+	"ctrlP
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'mattn/ctrlp-matchfuzzy'
+	Plug 'mattn/ctrlp-launcher'
+	Plug 'mattn/ctrlp-lsp'
+	Plug 'mattn/ctrlp-yo'
+	Plug 'mattn/ctrlp-git'
+
+	"vimlsp
+	Plug 'prabirshrestha/async.vim'
+	Plug 'prabirshrestha/asyncomplete.vim'
+	Plug 'prabirshrestha/asyncomplete-lsp.vim'
+	Plug 'prabirshrestha/vim-lsp'
+	Plug 'mattn/vim-lsp-settings'
+	Plug 'mattn/vim-lsp-icons'
+	Plug 'hrsh7th/vim-vsnip'
+	Plug 'hrsh7th/vim-vsnip-integ'
+
+	Plug 'mattn/vim-lexiv'
+
+	Plug 'tyru/caw.vim'
+	Plug 'tyru/eskk.vim'
+	Plug 'skanehira/gyazo.vim'
+	Plug 'machakann/vim-highlightedyank'
+
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
+
+	if has('nvim')
+		Plug 'joonty/vdebug'
+		Plug 'dbakker/vim-projectroot'
+		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	endif
+
+call plug#end()
+
+set helplang=ja,en
+
+" =============
+"" 見た目系
+" =============
+" インデント幅
+set shiftwidth=4
+" タブキー押下時に挿入される文字幅を指定
+set softtabstop=4
+" ファイル内にあるタブ文字の表示幅
+set tabstop=4
+"" 行番号を表示
+set number
+"" 現在の行を強調表示
+set cursorline
+"" インデントはスマートインデント
+set smartindent
+"" 括弧入力時の対応する括弧を表示
+set showmatch
+"" ステータスラインを常に表示
+set laststatus=2
+" 行末のスペースを可視化
+set listchars=tab:^\ ,trail:~
+syntax enable
+set termguicolors
+colorscheme iceberg
+" colorscheme elly
+set bg=dark
+
+" =============
+"" 検索系
+" =============
+" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set ignorecase
+" 検索文字列に大文字が含まれている場合は区別して検索する
+set smartcase
+" 検索文字列入力時に順次対象文字列にヒットさせる
+set incsearch
+" 検索時に最後まで行ったら最初に戻る
+set wrapscan
+" 検索語をハイライト表示
+set hlsearch
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+let s:plugs = get(s:, 'plugs', get(g:, 'plugs', {}))
+function! FindPlugin(name) abort
+  return has_key(s:plugs, a:name) ? isdirectory(s:plugs[a:name].dir) : 0
+endfunction
+command! -nargs=1 UsePlugin if !FindPlugin(<args>) | finish | endif
+
+runtime! _config/*.vim
