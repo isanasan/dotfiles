@@ -1,0 +1,9 @@
+mklink /D %USERPROFILE%\vimfiles %USERPROFILE%\dotfiles\config\vimfiles
+
+mklink /D %USERPROFILE%\.eskk %USERPROFILE%\dotfiles\config\.eskk
+
+mklink /D %USERPROFILE%\.config %USERPROFILE%\dotfiles\config\.config
+
+mklink %USERPROFILE%\.ctrlp-launcher-lsp %USERPROFILE%\dotfiles\config\.ctrlp-launcher-lsp
+
+mklink %USERPROFILE%\.skk-jisyo %USERPROFILE%\dotfiles\config\.skk-jisyo
