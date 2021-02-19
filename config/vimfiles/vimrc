@@ -65,12 +65,12 @@ call plug#begin('~/.vim/plugged')
 	"vimlsp
 	Plug 'prabirshrestha/vim-lsp'
 	Plug 'mattn/vim-lsp-settings'
-	Plug 'lighttiger2505/deoplete-vim-lsp'
 
 	Plug 'mattn/vim-lsp-icons'
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'hrsh7th/vim-vsnip-integ'
 
+	" others
 	Plug 'mattn/vim-lexiv'
 
 	Plug 'tyru/caw.vim'
@@ -85,6 +85,7 @@ call plug#begin('~/.vim/plugged')
 		Plug 'joonty/vdebug'
 		Plug 'dbakker/vim-projectroot'
 		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+		Plug 'lighttiger2505/deoplete-vim-lsp'
 	endif
 
 call plug#end()
