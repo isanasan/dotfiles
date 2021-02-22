@@ -2,7 +2,7 @@ setglobal fileformat=unix
 setglobal formatoptions+=mb
 
 if has('nvim')
-	let g:python3_host_prog = 'python'
+	let g:python3_host_prog = 'C:\Users\im000556\AppData\Local\Programs\Python\Python39\python.exe'
 endif
 
 set nocompatible
