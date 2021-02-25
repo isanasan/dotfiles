@@ -3,6 +3,7 @@ setglobal formatoptions+=mb
 
 if has('nvim')
 	let g:python3_host_prog = 'C:\Users\im000556\AppData\Local\Programs\Python\Python39\python.exe'
+	let g:loaded_python_provider = 0
 endif
 
 set nocompatible
