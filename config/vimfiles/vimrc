@@ -2,14 +2,16 @@ setglobal fileformat=unix
 setglobal formatoptions+=mb
 
 if has('nvim')
-	let g:python3_host_prog = 'C:\Users\im000556\AppData\Local\Programs\Python\Python39\python.exe'
-	let g:loaded_python_provider = 0
+    if has('win32')
+        let g:python3_host_prog = 'C:\Users\im000556\AppData\Local\Programs\Python\Python39\python.exe'
+    endif
+    let g:loaded_python_provider = 0
 endif
 
 set nocompatible
 set enc=utf-8
 if exists('&ambw')
-	set ambiwidth=single
+    set ambiwidth=single
 endif
 " set fencs=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16,default
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
@@ -40,54 +42,54 @@ let g:plug_shallow = 0
 
 call plug#begin('~/.vim/plugged')
 
-	Plug 'vim-jp/vimdoc-ja'
+    Plug 'vim-jp/vimdoc-ja'
 
-	" 見た目関係
-	Plug 'cocopon/iceberg.vim'
-	Plug 'ulwlu/elly.vim'
-	Plug 'itchyny/lightline.vim'
+    " 見た目関係
+    Plug 'cocopon/iceberg.vim'
+    Plug 'ulwlu/elly.vim'
+    Plug 'itchyny/lightline.vim'
 
-	" markdown
-	Plug 'plasticboy/vim-markdown'
+    " markdown
+    Plug 'plasticboy/vim-markdown'
 
-	" filetree
-	Plug 'lambdalisue/nerdfont.vim'
-	Plug 'lambdalisue/fern.vim'
-	Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+    " filetree
+    Plug 'lambdalisue/nerdfont.vim'
+    Plug 'lambdalisue/fern.vim'
+    Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
-	"ctrlP
-	Plug 'ctrlpvim/ctrlp.vim'
-	Plug 'mattn/ctrlp-matchfuzzy'
-	Plug 'mattn/ctrlp-launcher'
-	Plug 'mattn/ctrlp-lsp'
-	Plug 'mattn/ctrlp-yo'
-	Plug 'mattn/ctrlp-git'
+    "ctrlP
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'mattn/ctrlp-matchfuzzy'
+    Plug 'mattn/ctrlp-launcher'
+    Plug 'mattn/ctrlp-lsp'
+    Plug 'mattn/ctrlp-yo'
+    Plug 'mattn/ctrlp-git'
 
-	"vimlsp
-	Plug 'prabirshrestha/vim-lsp'
-	Plug 'mattn/vim-lsp-settings'
+    "vimlsp
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
 
-	Plug 'mattn/vim-lsp-icons'
-	Plug 'hrsh7th/vim-vsnip'
-	Plug 'hrsh7th/vim-vsnip-integ'
+    Plug 'mattn/vim-lsp-icons'
+    Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/vim-vsnip-integ'
 
-	" others
-	Plug 'mattn/vim-lexiv'
+    " others
+    Plug 'mattn/vim-lexiv'
 
-	Plug 'tyru/caw.vim'
-	Plug 'tyru/eskk.vim'
-	Plug 'skanehira/gyazo.vim'
-	Plug 'machakann/vim-highlightedyank'
+    Plug 'tyru/caw.vim'
+    Plug 'tyru/eskk.vim'
+    Plug 'skanehira/gyazo.vim'
+    Plug 'machakann/vim-highlightedyank'
 
-	Plug 'airblade/vim-gitgutter'
-	Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
 
-	if has('nvim')
-		Plug 'joonty/vdebug'
-		Plug 'dbakker/vim-projectroot'
-		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-		Plug 'lighttiger2505/deoplete-vim-lsp'
-	endif
+    if has('nvim')
+        Plug 'joonty/vdebug'
+        Plug 'dbakker/vim-projectroot'
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        Plug 'lighttiger2505/deoplete-vim-lsp'
+    endif
 
 call plug#end()
 
@@ -96,6 +98,7 @@ set helplang=ja,en
 " =============
 "" 見た目系
 " =============
+set expandtab
 " インデント幅
 set shiftwidth=4
 " タブキー押下時に挿入される文字幅を指定

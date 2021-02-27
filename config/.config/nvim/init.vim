@@ -1,3 +1,9 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after runtimepath+=~/vimfiles
 let &packpath = &runtimepath
-source ~/vimfiles/vimrc
+if has('win32')
+	source ~/vimfiles/vimrc
+endif
+
+if has('unix')
+	source ~/.vim/vimrc
+endif
