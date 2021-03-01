@@ -8,8 +8,3 @@ call deoplete#custom#option({
 \ 'nofile_complete_filetypes': ['fern'],
 \ })
 
-augroup deoplete
-	autocmd!
-	autocmd FileType fern call deoplete#custom#buffer_option('auto_complete', v:false)
-augroup END
-
