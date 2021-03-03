@@ -7,7 +7,7 @@ let g:lightline = {
     \ 'colorscheme': 'iceberg',
     \ 'mode_map': {'c': 'NORMAL'},
     \ 'active': {
-    \   'left': [ ['mode', 'paste'], ['fugitive', 'filename'] ]
+    \   'left': [ ['mode', 'paste'], ['gitbranch', 'filename'] ]
     \ },
     \ 'component': {
     \   'lineinfo': ' %3l:%-2v',
@@ -15,7 +15,7 @@ let g:lightline = {
     \ 'component_function': {
     \   'modified': 'MyModified',
     \   'readonly': 'MyReadonly',
-    \   'fugitive': 'MyFugitive',
+    \   'gitbranch': 'MyGitBranch',
     \   'filename': 'MyFilename',
     \   'fileformat': 'MyFileformat',
     \   'filetype': 'MyFiletype',
@@ -39,6 +39,14 @@ function! MyFilename()
         \  &ft == 'vimshell' ? vimshell#get_status_string() :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
+
+function! MyGitBranch()
+    try
+        return ' ' . gitbranch#name()
+    catch
+    endtry
+        return ''
 endfunction
 
 function! MyFugitive()
