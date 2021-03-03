@@ -3,7 +3,7 @@ UsePlugin 'lightline.vim'
 set noshowmode
 
 let g:lightline = {
-    \  'enable': { 'tabline': 0 },
+    \ 'enable': { 'tabline': 0 },
     \ 'colorscheme': 'iceberg',
     \ 'mode_map': {'c': 'NORMAL'},
     \ 'active': {
