@@ -7,7 +7,7 @@ let g:lightline = {
     \ 'colorscheme': 'iceberg',
     \ 'mode_map': {'c': 'NORMAL'},
     \ 'active': {
-    \   'left': [ ['mode', 'paste'], ['gitbranch', 'filename'] ]
+    \   'left': [ ['mode', 'paste'], ['gitbranch', 'filename','eskk'] ]
     \ },
     \ 'component': {
     \   'lineinfo': ' %3l:%-2v',
@@ -20,9 +20,18 @@ let g:lightline = {
     \   'fileformat': 'MyFileformat',
     \   'filetype': 'MyFiletype',
     \   'fileencoding': 'MyFileencoding',
-    \   'mode': 'MyMode'
+    \   'mode': 'MyMode',
+    \   'eskk': 'L_eskk_get_mode'
     \ }
 \ }
+
+function L_eskk_get_mode()
+    if (mode() == 'i') && eskk#is_enabled()
+        return g:eskk#statusline_mode_strings[eskk#get_mode()]
+    else
+        return ''
+    endif
+endfunction
 
 function! MyModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -47,16 +56,6 @@ function! MyGitBranch()
     catch
     endtry
         return ''
-endfunction
-
-function! MyFugitive()
-  try
-    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head())
-      return ' ' . fugitive#head()
-    endif
-  catch
-  endtry
-  return ''
 endfunction
 
 function! MyFileformat()
