@@ -27,7 +27,8 @@ let g:lightline = {
 
 function L_eskk_get_mode()
     if (mode() == 'i') && eskk#is_enabled()
-        return g:eskk#statusline_mode_strings[eskk#get_mode()]
+        " return g:eskk#statusline_mode_strings[eskk#get_mode()]
+        return g:eskk#statusline()
     else
         return ''
     endif
