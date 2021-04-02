@@ -1,8 +1,5 @@
 let mapleader = "\<Space>"
 
-inoremap <C-g> <ESC>
-vnoremap <C-g> <ESC>
-
 nnoremap <silent> <C-n> :<C-u>cnext<CR>
 nnoremap <silent> <C-p> :<C-u>cprev<CR>
 
