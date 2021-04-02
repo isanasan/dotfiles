@@ -1,0 +1,6 @@
+test
+    <?php
+
+    final class {{_expr_:substitute(substitute(substitute(expand('%'), '.*lib[\\/]', '', 'g'), '[\\/]', '::', 'g'), '\.pm$', '', 'g')}}; extends TestCase
+    {
+    }
