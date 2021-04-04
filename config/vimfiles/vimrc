@@ -42,7 +42,7 @@ let g:plug_shallow = 0
 
 call plug#begin('~/.vim/plugged')
 
-    Plug 'vim-jp/vimdoc-ja'
+    " Plug 'vim-jp/vimdoc-ja'
 
     " 見た目関係
     Plug 'cocopon/iceberg.vim'
@@ -79,6 +79,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'tyru/eskk.vim'
     Plug 'skanehira/gyazo.vim'
     Plug 'machakann/vim-highlightedyank'
+    Plug 'junegunn/vim-peekaboo'
+    Plug 'sheerun/vim-polyglot'
 
     if has('unix')
         Plug 'gelguy/wilder.nvim'
