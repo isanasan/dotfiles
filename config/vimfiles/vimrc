@@ -43,6 +43,7 @@ let g:plug_shallow = 0
 call plug#begin('~/.vim/plugged')
 
     " Plug 'vim-jp/vimdoc-ja'
+    Plug 'machakann/vim-sandwich'
 
     " 見た目関係
     Plug 'cocopon/iceberg.vim'
