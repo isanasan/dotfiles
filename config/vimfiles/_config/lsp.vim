@@ -1,4 +1,4 @@
-UsePlugin 'lsp.vim'
+UsePlugin 'vim-lsp'
 
 function! s:on_lsp_buffer_enabled() abort
 	setlocal omnifunc=lsp#complete
