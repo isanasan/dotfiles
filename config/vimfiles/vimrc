@@ -13,12 +13,10 @@ set enc=utf-8
 if exists('&ambw')
     set ambiwidth=single
 endif
-" set fencs=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16,default
-" set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-" 改行コード自動判別
-" set fileformats=unix,dos,mac
+set fileencoding=utf-8
+set fencs=utf-8,ucs-bom,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16,default
 "文字コードをUFT-8に設定
-"scriptencoding utf-8
+scriptencoding utf-8
 "" バックアップファイルを作らない
 set nobackup
 "" スワップファイルを作らない
