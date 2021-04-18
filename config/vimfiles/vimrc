@@ -14,7 +14,7 @@ if exists('&ambw')
     set ambiwidth=single
 endif
 " set fencs=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16,default
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+" set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 " 改行コード自動判別
 " set fileformats=unix,dos,mac
 "文字コードをUFT-8に設定
