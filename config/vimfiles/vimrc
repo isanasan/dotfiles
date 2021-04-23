@@ -42,6 +42,8 @@ call plug#begin('~/.vim/plugged')
 
     " Plug 'vim-jp/vimdoc-ja'
     Plug 'machakann/vim-sandwich'
+    Plug 'unblevable/quick-scope' 
+    Plug 'rhysd/clever-f.vim'
 
     " 見た目関係
     Plug 'cocopon/iceberg.vim'
@@ -153,3 +155,4 @@ endfunction
 command! -nargs=1 UsePlugin if !FindPlugin(<args>) | finish | endif
 
 runtime! _config/*.vim
+
