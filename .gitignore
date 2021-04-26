@@ -1,6 +1,7 @@
 config/.config/lazygit/
 config/.config/lazydocker/
 config/.config/configstore/
+config/.config/composer/
 config/vimfiles/autoload/
 
 config/vimfiles/autoload/plug.vim
