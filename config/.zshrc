@@ -52,6 +52,8 @@ setopt HIST_NO_STORE              # histroy$B%3%^%s%I$O5-O?$7$J$$(B
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
+eval "$(gh completion -s zsh)"
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
