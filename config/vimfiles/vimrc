@@ -82,6 +82,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'machakann/vim-highlightedyank'
     Plug 'junegunn/vim-peekaboo'
     Plug 'sheerun/vim-polyglot'
+    Plug 'bfredl/nvim-miniyank'
 
     if has('unix')
         Plug 'gelguy/wilder.nvim'
