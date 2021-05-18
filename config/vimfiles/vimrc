@@ -93,6 +93,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
     Plug 'itchyny/vim-gitbranch'
+    Plug 'lambdalisue/gina.vim'
     
     if has('nvim')
         Plug 'joonty/vdebug'
