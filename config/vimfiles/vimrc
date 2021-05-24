@@ -74,7 +74,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/vim-vsnip-integ'
 
     " others
-    Plug 'mattn/vim-lexiv'
+    " Plug 'mattn/vim-lexiv'
+    Plug 'cohama/lexima.vim'
 
     Plug 'tyru/caw.vim'
     Plug 'tyru/eskk.vim'
