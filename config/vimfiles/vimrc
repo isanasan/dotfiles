@@ -103,6 +103,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'lighttiger2505/deoplete-vim-lsp'
     endif
 
+    Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 set helplang=ja,en
