@@ -107,6 +107,8 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+let g:vimspector_enable_mappings = 'HUMAN'
+
 set helplang=ja,en
 
 " =============
