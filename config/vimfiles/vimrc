@@ -81,7 +81,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tyru/eskk.vim'
     Plug 'skanehira/gyazo.vim'
     Plug 'machakann/vim-highlightedyank'
-    Plug 'junegunn/vim-peekaboo'
+    Plug 'tversteeg/registers.nvim'
     Plug 'sheerun/vim-polyglot'
     Plug 'bfredl/nvim-miniyank'
 
