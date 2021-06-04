@@ -84,6 +84,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tversteeg/registers.nvim'
     Plug 'sheerun/vim-polyglot'
     Plug 'bfredl/nvim-miniyank'
+    Plug 'mattn/vim-sonictemplate'
 
     if has('unix')
         Plug 'gelguy/wilder.nvim'
