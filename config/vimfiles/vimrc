@@ -40,6 +40,8 @@ let g:plug_shallow = 0
 
 call plug#begin('~/.vim/plugged')
 
+    Plug 'Shougo/deol.nvim'
+
     " Plug 'vim-jp/vimdoc-ja'
     Plug 'machakann/vim-sandwich'
     Plug 'unblevable/quick-scope' 
@@ -98,7 +100,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'lambdalisue/gina.vim'
     
     if has('nvim')
-        Plug 'joonty/vdebug'
+        " Plug 'joonty/vdebug'
         Plug 'dbakker/vim-projectroot'
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         Plug 'lighttiger2505/deoplete-vim-lsp'
