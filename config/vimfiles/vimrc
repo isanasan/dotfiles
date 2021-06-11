@@ -91,6 +91,7 @@ call plug#begin('~/.vim/plugged')
     if has('unix')
         Plug 'gelguy/wilder.nvim'
         Plug 'puremourning/vimspector'
+        Plug 'deoplete-plugins/deoplete-zsh'
     endif
 
     " git
