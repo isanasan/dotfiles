@@ -16,7 +16,7 @@ endfunction
 
 augroup __fern__
 	au!
-	autocmd VimEnter * ++nested Fern . -drawer -stay -keep -toggle -reveal=%
+    autocmd VimEnter * ++nested if(empty(&filetype)) | Fern . -drawer -stay -keep -toggle -reveal=% | endif
 	autocmd FileType fern call s:fern_setup()
 augroup END
 
