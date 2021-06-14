@@ -33,6 +33,9 @@ set clipboard+=unnamed
 " 挿入モードでバックスペースで削除できるようにする
 set backspace=indent,eol,start
 
+" 補完の高さ
+set pumheight=10
+
 "" コマンドラインの補完
 set wildmode=list:longest
 
@@ -133,6 +136,7 @@ set cursorline
 set smartindent
 "" 括弧入力時の対応する括弧を表示
 set showmatch
+set matchtime=1
 "" ステータスラインを常に表示
 set laststatus=2
 " 行末のスペースを可視化
