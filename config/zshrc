@@ -76,7 +76,7 @@ bindkey '^]' cd_ghq_list
 
 alias dc='docker compose'
 alias gq='ghq'
-alias composer='docker run --rm -it -v $(pwd):/app composer/composer'
+alias composer='docker run --rm -it -v $(pwd):/app -u --user $(id -u):$(id -g) composer/composer'
 alias oas='docker run --rm -v "$(pwd):/local" openapitools/openapi-generator-cli'
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
