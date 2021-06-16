@@ -60,6 +60,7 @@ let g:plug_shallow = 0
 call plug#begin('~/.vim/plugged')
 
     Plug 'Shougo/deol.nvim'
+    Plug 'thinca/vim-quickrun'
 
     " Plug 'vim-jp/vimdoc-ja'
     Plug 'machakann/vim-sandwich'
