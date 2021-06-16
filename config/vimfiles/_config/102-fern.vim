@@ -14,6 +14,12 @@ function! s:fern_setup() abort
 		\ <Plug>(fern-action-open:select)
 endfunction
 
+augroup my-glyph-palette
+autocmd! *
+autocmd FileType fern call glyph_palette#apply()
+autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
+
 augroup __fern__
 	au!
     autocmd VimEnter * ++nested if(empty(&filetype)) | Fern . -drawer -stay -keep -toggle -reveal=% | endif
