@@ -60,6 +60,7 @@ let g:plug_shallow = 0
 
 call plug#begin('~/.vim/plugged')
 
+    Plug 'mattn/emoji-vim'
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'Shougo/deol.nvim'
     Plug 'thinca/vim-quickrun'
