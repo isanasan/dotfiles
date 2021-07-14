@@ -1,5 +1,7 @@
 UsePlugin 'deoplete.nvim'
 
+imap <expr><TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+
 let g:deoplete#enable_at_startup = 1
 
 call deoplete#custom#option({

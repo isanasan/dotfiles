@@ -2,6 +2,7 @@ UsePlugin 'eskk.vim'
 
 "漢字変換した時に候補が1つの場合、自動的に確定する
 let g:eskk#kakutei_when_unique_candidate = 1
+let g:eskk#enable_completion = 0
 "デフォルトのマッピングを削除
 " let g:eskk#no_default_mappings = 1
 "ノーマルモードに戻るとeskkモードを初期値にする
