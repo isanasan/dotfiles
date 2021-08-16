@@ -11,6 +11,7 @@
     defaultBranch = main
 [diff]
     tool = nvimdiff
+	algorithm = histogram
 [difftool "nvimdiff"]
     cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
 [mergetool "nvimdiff"]
