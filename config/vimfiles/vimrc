@@ -20,7 +20,6 @@ setglobal formatoptions+=mb
 if has('nvim')
     if has('win32')
         let g:python3_host_prog = 'C:\Users\im000556\AppData\Local\Programs\Python\Python39\python.exe'
-        set sh=pwsh
     endif
     let g:loaded_python_provider = 0
 endif
@@ -112,9 +111,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tversteeg/registers.nvim'
     Plug 'bfredl/nvim-miniyank'
     Plug 'mattn/vim-sonictemplate'
+    Plug 'gelguy/wilder.nvim'
 
     if has('unix')
-        Plug 'gelguy/wilder.nvim'
         Plug 'puremourning/vimspector'
         Plug 'deoplete-plugins/deoplete-zsh'
     endif
