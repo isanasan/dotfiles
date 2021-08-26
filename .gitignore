@@ -18,3 +18,5 @@ config/.config/gatsby
 
 
 config/vimfiles/minivimrc
+
+config/.config/nvim/plugin/packer_compiled.lua
