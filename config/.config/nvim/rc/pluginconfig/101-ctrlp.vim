@@ -1,5 +1,3 @@
-UsePlugin 'ctrlp.vim'
-
 " CtrlP
 nmap <c-e> <plug>(ctrlp-launcher)
 nnoremap ,g :<c-u>CtrlPGitFiles<cr>

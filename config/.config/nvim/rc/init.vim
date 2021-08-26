@@ -1,3 +1,6 @@
+set runtimepath^=~/.vim runtimepath+=~/.vim/after runtimepath+=~/vimfiles
+let &packpath = &runtimepath
+
 let g:loaded_gzip              = 1
 let g:loaded_tar               = 1
 let g:loaded_tarPlugin         = 1
@@ -57,84 +60,6 @@ set wildmode=list:longest
 
 let g:plug_shallow = 0
 
-call plug#begin('~/.vim/plugged')
-
-    Plug 'mattn/emoji-vim'
-    Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'Shougo/deol.nvim'
-    Plug 'thinca/vim-quickrun'
-
-    " Plug 'vim-jp/vimdoc-ja'
-    Plug 'machakann/vim-sandwich'
-    Plug 'unblevable/quick-scope' 
-    Plug 'rhysd/clever-f.vim'
-
-    " 見た目関係
-    Plug 'cocopon/iceberg.vim'
-    Plug 'ulwlu/elly.vim'
-    Plug 'itchyny/lightline.vim'
-
-    " markdown
-    Plug 'plasticboy/vim-markdown'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-    " filetree
-    Plug 'lambdalisue/nerdfont.vim'
-    Plug 'lambdalisue/fern.vim'
-    Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-    Plug 'lambdalisue/glyph-palette.vim'
-    Plug 'lambdalisue/fern-hijack.vim'
-
-    "ctrlP
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'mattn/ctrlp-launcher'
-    Plug 'mattn/ctrlp-lsp'
-    Plug 'mattn/ctrlp-yo'
-    Plug 'mattn/ctrlp-git'
-
-    "vimlsp
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'mattn/vim-lsp-settings'
-
-    Plug 'mattn/vim-lsp-icons'
-    Plug 'hrsh7th/vim-vsnip'
-    Plug 'hrsh7th/vim-vsnip-integ'
-
-    " others
-    " Plug 'mattn/vim-lexiv'
-    Plug 'cohama/lexima.vim'
-
-    Plug 'tyru/caw.vim'
-    Plug 'tyru/eskk.vim'
-    Plug 'skanehira/gyazo.vim'
-    Plug 'machakann/vim-highlightedyank'
-    Plug 'tversteeg/registers.nvim'
-    Plug 'bfredl/nvim-miniyank'
-    Plug 'mattn/vim-sonictemplate'
-    Plug 'gelguy/wilder.nvim'
-
-    if has('unix')
-        Plug 'puremourning/vimspector'
-        Plug 'deoplete-plugins/deoplete-zsh'
-    endif
-
-    " git
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
-    Plug 'itchyny/vim-gitbranch'
-    Plug 'lambdalisue/gina.vim'
-    
-    if has('nvim')
-        " Plug 'joonty/vdebug'
-        Plug 'dbakker/vim-projectroot'
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        Plug 'lighttiger2505/deoplete-vim-lsp'
-    endif
-
-    Plug 'mattn/emmet-vim'
-
-call plug#end()
-
 let g:vimspector_enable_mappings = 'HUMAN'
 
 set helplang=ja,en
@@ -188,12 +113,3 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "     au!
 "     au ColorScheme * unlet g:terminal_ansi_colors
 " augroup END
-
-let s:plugs = get(s:, 'plugs', get(g:, 'plugs', {}))
-function! FindPlugin(name) abort
-  return has_key(s:plugs, a:name) ? isdirectory(s:plugs[a:name].dir) : 0
-endfunction
-command! -nargs=1 UsePlugin if !FindPlugin(<args>) | finish | endif
-
-runtime! _config/*.vim
-

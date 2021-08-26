@@ -1,5 +1,3 @@
-UsePlugin 'lightline.vim'
-
 set noshowmode
 
 let g:lightline = {

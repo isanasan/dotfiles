@@ -1,5 +1,3 @@
-UsePlugin 'deol.nvim'
-
 nnoremap [deol]	<Nop>
 nmap     <Space>d [deol]
 

@@ -1,5 +1,3 @@
-UsePlugin 'vim-sonictemplate'
-
 let g:sonictemplate_vim_template_dir = '~/.vim/sonictemplate'
 
 let g:sonictemplate_license = 'MIT'

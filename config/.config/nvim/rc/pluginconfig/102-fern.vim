@@ -1,5 +1,3 @@
-UsePlugin 'fern.vim'
-
 " fern settings
 let g:fern#renderer = "nerdfont"
 

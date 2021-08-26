@@ -1,5 +1,3 @@
-UsePlugin 'wilder.nvim'
-
 call wilder#enable_cmdline_enter()
 set wildcharm=<Tab>
 cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"

@@ -1,5 +1,3 @@
-UsePlugin 'vim-lsp'
-
 function! s:on_lsp_buffer_enabled() abort
 	setlocal omnifunc=lsp#complete
 	setlocal signcolumn=yes
