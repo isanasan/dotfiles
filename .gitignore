@@ -1,22 +1,17 @@
-config/.config/lazygit/
-config/.config/lazydocker/
-config/.config/configstore/
-config/.config/composer/
-config/.config/gh/
+config/config/lazygit/
+config/config/lazydocker/
+config/config/configstore/
+config/config/composer/
+config/config/gh/
 config/vimfiles/autoload/
 
 config/vimfiles/autoload/plug.vim
 config/vimfiles/autoload/plug.vim.old
 config/.skk-jisyo
-config/.eskk/log/
+config/eskk/log/
 
-config/.config/dlv/config.yml
-config/.config/gh/config.yml
-config/.config/gh/hosts.yml
-config/.config/gh/state.yml
-config/.config/gatsby
-
+config/config/gatsby
 
 config/vimfiles/minivimrc
 
-config/.config/nvim/plugin/packer_compiled.lua
+config/config/nvim/plugin/packer_compiled.lua
