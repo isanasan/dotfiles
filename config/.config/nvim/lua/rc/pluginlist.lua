@@ -2,6 +2,9 @@ vim.cmd[[packadd packer.nvim]]
 
 require'packer'.startup{
     function(use)
+        use {'nvim-lua/popup.nvim'}
+        use {'nvim-lua/plenary.nvim'}
+
         use{'wbthomason/packer.nvim', opt = true}
 
         use 'mattn/emoji-vim'
@@ -16,7 +19,7 @@ require'packer'.startup{
         use 'thinca/vim-quickrun'
 
         use 'machakann/vim-sandwich'
-        use 'unblevable/quick-scope' 
+        use 'unblevable/quick-scope'
         use 'rhysd/clever-f.vim'
 
         use 'cocopon/iceberg.vim'
@@ -33,6 +36,14 @@ require'packer'.startup{
         }
         use 'iamcco/markdown-preview.nvim'
 
+       --telescope
+        use {
+            'nvim-telescope/telescope.nvim',
+            event = "VimEnter",
+            after = {'popup.nvim', 'plenary.nvim'},
+            config = function() require 'rc/pluginconfig/telescope' end
+        }
+
         -- filetree
         use 'lambdalisue/nerdfont.vim'
         use {
@@ -42,16 +53,6 @@ require'packer'.startup{
         use 'lambdalisue/fern-renderer-nerdfont.vim'
         use 'lambdalisue/glyph-palette.vim'
         use 'lambdalisue/fern-hijack.vim'
-
-        --ctrlP
-        use {
-            'ctrlpvim/ctrlp.vim',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/101-ctrlp.vim') end
-            }
-        use 'mattn/ctrlp-launcher'
-        use 'mattn/ctrlp-lsp'
-        use 'mattn/ctrlp-yo'
-        use 'mattn/ctrlp-git'
 
         --vimlsp
         use {
@@ -102,8 +103,6 @@ require'packer'.startup{
         use 'lighttiger2505/deoplete-vim-lsp'
 
         use 'mattn/emmet-vim'
-
-        use 'nvim-lua/plenary.nvim'
     end
 }
 
