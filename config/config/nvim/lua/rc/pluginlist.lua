@@ -92,11 +92,14 @@ require'packer'.startup{
         use 'dbakker/vim-projectroot'
 
         use {
-            'Shougo/deoplete.nvim',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/100-deoplete.vim') end
+            'Shougo/ddc.vim',
+            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/100-ddc.vim') end
         }
-        use 'deoplete-plugins/deoplete-zsh'
-        use 'lighttiger2505/deoplete-vim-lsp'
+
+        use 'Shougo/ddc-around'
+        use 'Shougo/ddc-matcher_head'
+        use 'Shougo/ddc-sorter_rank'
+        use 'shun/ddc-vim-lsp'
 
         use 'mattn/emmet-vim'
     end
