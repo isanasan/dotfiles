@@ -4,6 +4,7 @@ require'packer'.startup{
     function(use)
         use {'nvim-lua/popup.nvim'}
         use {'nvim-lua/plenary.nvim'}
+        use {'vim-denops/denops.vim'}
 
         use{'wbthomason/packer.nvim', opt = true}
 
@@ -84,11 +85,6 @@ require'packer'.startup{
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/102-wilder.vim') end
         }
 
-        if vim.fn.has('unix') then
-            use 'puremourning/vimspector'
-            use 'deoplete-plugins/deoplete-zsh'
-        end
-
         -- git
         use 'airblade/vim-gitgutter'
         use 'tpope/vim-fugitive'
@@ -96,10 +92,12 @@ require'packer'.startup{
         use 'lambdalisue/gina.vim'
 
         use 'dbakker/vim-projectroot'
+
         use {
             'Shougo/deoplete.nvim',
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/100-deoplete.vim') end
         }
+        use 'deoplete-plugins/deoplete-zsh'
         use 'lighttiger2505/deoplete-vim-lsp'
 
         use 'mattn/emmet-vim'
