@@ -40,8 +40,6 @@ require'packer'.startup{
        --telescope
         use {
             'nvim-telescope/telescope.nvim',
-            event = "VimEnter",
-            after = {'popup.nvim', 'plenary.nvim'},
             config = function() require 'rc/pluginconfig/telescope' end
         }
 
