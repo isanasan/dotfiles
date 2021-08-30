@@ -5,3 +5,6 @@ mklink /D %USERPROFILE%\.eskk %USERPROFILE%\dotfiles\config\eskk
 mklink /D %USERPROFILE%\.config %USERPROFILE%\dotfiles\config\config
 
 mklink %USERPROFILE%\.skk-jisyo %USERPROFILE%\dotfiles\config\.skk-jisyo
+
+mklink %USERPROFILE%\AppData\Local\vim-lsp-settings\settings.json %USERPROFILE%\dotfiles\config\lsp\settings.json
+

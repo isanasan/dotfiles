@@ -6,4 +6,5 @@ ln -s ${dotfiles_dir}/config/eskk               ~/.eskk
 ln -s ${dotfiles_dir}/config/config             ~/.config
 ln -s ${dotfiles_dir}/config/.skk-jisyo          ~/.skk-jisyo
 ln -s ${dotfiles_dir}/config/p10k.zsh          ~/.p10k.zsh
+ln -s ${dotfiles_dir}/config/lsp/settings.json ~/.local/share/vim-lsp-settings/settings.json
 

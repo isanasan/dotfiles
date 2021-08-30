@@ -1,0 +1,12 @@
+{
+    "sumneko-lua-language-server": {
+        "workspace_config": {
+            "Lua": {
+                "diagnostics": {
+                    "enable": true,
+                    "globals": "vim"
+                }
+            }
+        }
+    }
+}
