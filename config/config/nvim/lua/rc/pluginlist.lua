@@ -66,9 +66,14 @@ require'packer'.startup{
         use 'cohama/lexima.vim'
 
         use 'tyru/caw.vim'
+        -- use {
+        --     'tyru/eskk.vim',
+        --     config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/111-eskk.vim') end
+        -- }
+
         use {
-            'tyru/eskk.vim',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/111-eskk.vim') end
+            'kuuote/denops-skkeleton.vim',
+            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/skkeleton.vim') end
         }
         use 'skanehira/gyazo.vim'
         use 'machakann/vim-highlightedyank'

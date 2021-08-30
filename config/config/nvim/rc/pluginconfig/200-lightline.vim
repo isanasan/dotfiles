@@ -5,7 +5,7 @@ let g:lightline = {
     \ 'colorscheme': 'iceberg',
     \ 'mode_map': {'c': 'NORMAL'},
     \ 'active': {
-    \   'left': [ ['mode', 'paste'], ['gitbranch', 'filename','eskk'] ]
+    \   'left': [ ['mode', 'paste'], ['gitbranch', 'filename','skk'] ]
     \ },
     \ 'component': {
     \   'lineinfo': ' %3l:%-2v',
@@ -19,14 +19,13 @@ let g:lightline = {
     \   'filetype': 'MyFiletype',
     \   'fileencoding': 'MyFileencoding',
     \   'mode': 'MyMode',
-    \   'eskk': 'L_eskk_get_mode'
+    \   'skk': 'L_skk_get_is_enabled'
     \ }
 \ }
 
-function L_eskk_get_mode()
-    if (mode() == 'i') && eskk#is_enabled()
-        " return g:eskk#statusline_mode_strings[eskk#get_mode()]
-        return g:eskk#statusline()
+function L_skk_get_is_enabled()
+    if (mode() == 'i') && skkeleton#is_enabled()
+        return 'あ'
     else
         return ''
     endif
