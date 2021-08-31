@@ -63,7 +63,7 @@ require'packer'.startup{
         use 'mattn/vim-lsp-icons'
 
         -- others
-        use 'cohama/lexima.vim'
+        use {'cohama/lexima.vim',event = 'InsertEnter *'}
 
         use 'tyru/caw.vim'
         use {
