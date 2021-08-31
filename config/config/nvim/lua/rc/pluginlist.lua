@@ -33,9 +33,14 @@ require'packer'.startup{
         -- markdown
         use {
             'plasticboy/vim-markdown',
+            ft = {'markdown'},
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/markdown.vim') end
         }
-        use 'iamcco/markdown-preview.nvim'
+        use {
+            'iamcco/markdown-preview.nvim',
+            ft = {'markdown'},
+            run =  'cd app && yarn install'
+        }
 
        --telescope
         use {
