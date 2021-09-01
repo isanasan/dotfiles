@@ -6,7 +6,7 @@ require'packer'.startup{
         use {'nvim-lua/plenary.nvim'}
         use {'vim-denops/denops.vim'}
 
-        use{'wbthomason/packer.nvim', opt = true}
+        use {'wbthomason/packer.nvim', opt = true}
 
         use 'mattn/emoji-vim'
         use {
@@ -70,7 +70,10 @@ require'packer'.startup{
         -- others
         use {'cohama/lexima.vim',event = 'InsertEnter *'}
 
-        use 'tyru/caw.vim'
+        use {
+            'tyru/caw.vim',
+            config = [[require("rc.pluginconfig.caw").config()]]
+        }
         use {
             'kuuote/denops-skkeleton.vim',
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/skkeleton.vim') end
