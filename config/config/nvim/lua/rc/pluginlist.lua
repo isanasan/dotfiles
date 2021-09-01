@@ -11,7 +11,7 @@ require'packer'.startup{
         use 'mattn/emoji-vim'
         use {
             'nvim-treesitter/nvim-treesitter',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/104-treesitter.vim') end 
+            config = [[require("rc.pluginconfig.treesitter").config()]]
         }
         use {
             'Shougo/deol.nvim',
@@ -34,7 +34,7 @@ require'packer'.startup{
         use {
             'plasticboy/vim-markdown',
             ft = {'markdown'},
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/markdown.vim') end
+            config = [[require("rc.pluginconfig.markdown").config()]]
         }
         use {
             'iamcco/markdown-preview.nvim',
@@ -88,7 +88,7 @@ require'packer'.startup{
         }
         use {
             'gelguy/wilder.nvim',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/102-wilder.vim') end
+            config = [[require("rc.pluginconfig.wilder").config()]]
         }
 
         -- git
