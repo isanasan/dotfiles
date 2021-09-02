@@ -109,6 +109,9 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+set diffopt+=vertical
+set splitright
+
 " augroup iceberg
 "     au!
 "     au ColorScheme * unlet g:terminal_ansi_colors
