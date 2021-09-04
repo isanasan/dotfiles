@@ -8,7 +8,6 @@ require'packer'.startup{
 
         use {'wbthomason/packer.nvim', opt = true}
 
-        use 'mattn/emoji-vim'
         use {
             'nvim-treesitter/nvim-treesitter',
             config = [[require("rc.pluginconfig.treesitter").config()]]
@@ -64,7 +63,6 @@ require'packer'.startup{
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/lsp.vim') end
         }
         use 'mattn/vim-lsp-settings'
-
         use 'mattn/vim-lsp-icons'
 
         -- others
@@ -93,12 +91,10 @@ require'packer'.startup{
 
         -- git
         use 'airblade/vim-gitgutter'
-        use 'tpope/vim-fugitive'
         use 'itchyny/vim-gitbranch'
         use 'lambdalisue/gina.vim'
 
-        use 'dbakker/vim-projectroot'
-
+        -- ddc
         use {
             'Shougo/ddc.vim',
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/100-ddc.vim') end
