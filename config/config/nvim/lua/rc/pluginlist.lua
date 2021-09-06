@@ -9,6 +9,10 @@ require'packer'.startup{
         use {'wbthomason/packer.nvim', opt = true}
 
         use {
+            'ggandor/lightspeed.nvim',
+        }
+
+        use {
             'nvim-treesitter/nvim-treesitter',
             config = [[require("rc.pluginconfig.treesitter").config()]]
         }
@@ -20,7 +24,6 @@ require'packer'.startup{
 
         use 'machakann/vim-sandwich'
         use 'unblevable/quick-scope'
-        use 'rhysd/clever-f.vim'
 
         use 'cocopon/iceberg.vim'
         use 'ulwlu/elly.vim'
