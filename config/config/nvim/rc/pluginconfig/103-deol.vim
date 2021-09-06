@@ -1,6 +1,13 @@
 nnoremap [deol]	<Nop>
 nmap     <Space>d [deol]
 
+if has('win32')
+    set sh=pwsh
+    set shellcmdflag=-c
+    set shellquote=\"
+    set shellxquote=
+endif
+
 nnoremap <silent> [deol]b :<C-u>Deol<CR>
 
 let g:deol#custom_map = {
