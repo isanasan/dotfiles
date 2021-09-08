@@ -1,5 +1,7 @@
-config/config/lazygit/
 config/config/lazydocker/
+config/config/lazygit/invite
+config/config/lazygit/php-tddbook
+config/config/lazygit/dotfiles
 config/config/configstore/
 config/config/composer/
 config/config/gh/
@@ -15,3 +17,5 @@ config/config/gatsby
 config/vimfiles/minivimrc
 
 config/config/nvim/plugin/packer_compiled.lua
+
+config/config/lazygit/state.yml
