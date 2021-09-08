@@ -1,5 +1,6 @@
 " fern settings
 let g:fern#renderer = "nerdfont"
+let g:fern#default_hidden=1
 
 " fern toggle command
 nnoremap <silent>,t :<c-u>Fern . -drawer -stay -keep -toggle -reveal=%<cr>
@@ -23,5 +24,4 @@ augroup __fern__
     autocmd VimEnter * ++nested if(empty(&filetype)) | Fern . -drawer -stay -keep -toggle -reveal=% | endif
 	autocmd FileType fern call s:fern_setup()
 augroup END
-
 
