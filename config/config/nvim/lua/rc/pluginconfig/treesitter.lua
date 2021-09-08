@@ -4,7 +4,10 @@ local M = {}
 
     require 'nvim-treesitter.configs'.setup {
         highlight = {
-          enable = true,
+            enable = true,
+            disable = {
+                'vim',
+            }
         },
         indent = {
           enable = true,
