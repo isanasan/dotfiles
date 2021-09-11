@@ -88,10 +88,7 @@ require'packer'.startup{
             'mattn/vim-sonictemplate',
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/110-sonictemplate.vim') end
         }
-        use {
-            'gelguy/wilder.nvim',
-            config = [[require("rc.pluginconfig.wilder").config()]]
-        }
+        
 
         -- git
         use 'airblade/vim-gitgutter'
@@ -111,6 +108,16 @@ require'packer'.startup{
         use 'Shougo/ddc-nextword'
 
         use 'mattn/emmet-vim'
+
+        use {
+            'gelguy/wilder.nvim',
+            config = [[require("rc.pluginconfig.wilder").config()]],
+            cond = [[nocode]],
+        }
     end
 }
+
+local nocode = function()
+  return vim.fn.exists('g:vscode') == 0
+end
 
