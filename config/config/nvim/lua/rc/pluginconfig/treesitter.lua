@@ -7,6 +7,7 @@ local M = {}
             enable = true,
             disable = {
                 'vim',
+                'rst',
             }
         },
         indent = {
