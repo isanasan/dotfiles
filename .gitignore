@@ -19,3 +19,8 @@ config/vimfiles/minivimrc
 config/config/nvim/plugin/packer_compiled.lua
 
 config/config/lazygit/state.yml
+authors.json
+cohorts.json
+exts.json
+stack_plot.png
+survival.json
