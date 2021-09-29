@@ -38,6 +38,7 @@ require'packer'.startup{
             ft = {'markdown'},
             config = [[require("rc.pluginconfig.markdown").config()]]
         }
+
         use {
             'iamcco/markdown-preview.nvim',
             ft = {'markdown'},
@@ -77,7 +78,7 @@ require'packer'.startup{
             config = [[require("rc.pluginconfig.caw").config()]]
         }
         use {
-            'kuuote/denops-skkeleton.vim',
+            'vim-skk/denops-skkeleton.vim',
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/skkeleton.vim') end
         }
         use 'skanehira/gyazo.vim'
