@@ -29,9 +29,6 @@ let g:lsp_text_edit_enabled = 1
 let g:lsp_preview_float = 1
 let g:lsp_diagnostics_float_cursor = 1
 let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
-" 補完候補の設定
-"set completeopt=menuone,noinsert,noselect
-set completeopt=menuone,noinsert
 
 inoremap <expr><C-n> pumvisible() ? "\<Down>" : "\<C-n>"
 inoremap <expr><C-p> pumvisible() ? "\<Up>" : "\<C-p>"
