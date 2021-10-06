@@ -90,6 +90,9 @@ require'packer'.startup{
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/110-sonictemplate.vim') end
         }
         
+        use {
+            "lukas-reineke/indent-blankline.nvim"
+        }
 
         -- git
         use 'airblade/vim-gitgutter'
