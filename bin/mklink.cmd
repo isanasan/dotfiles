@@ -2,7 +2,7 @@ mklink /D %USERPROFILE%\vimfiles %USERPROFILE%\dotfiles\config\vimfiles
 
 mklink /D %USERPROFILE%\.eskk %USERPROFILE%\dotfiles\config\eskk
 
-mklink /D %USERPROFILE%\.config %USERPROFILE%\dotfiles\config\config
+mklink /D %USERPROFILE%\.config %USERPROFILE%\ghq\github.com\isanasan\dotfiles\config\config
 
 mklink %USERPROFILE%\.skk-jisyo %USERPROFILE%\dotfiles\config\.skk-jisyo
 
