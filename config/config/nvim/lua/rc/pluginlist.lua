@@ -4,7 +4,6 @@ require'packer'.startup{
     function(use)
         use {'nvim-lua/popup.nvim'}
         use {'nvim-lua/plenary.nvim'}
-        use {'vim-denops/denops.vim'}
 
         use {'wbthomason/packer.nvim', opt = true}
 
@@ -77,10 +76,7 @@ require'packer'.startup{
             'tyru/caw.vim',
             config = [[require("rc.pluginconfig.caw").config()]]
         }
-        use {
-            'vim-skk/denops-skkeleton.vim',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/skkeleton.vim') end
-        }
+
         use 'skanehira/gyazo.vim'
         use 'machakann/vim-highlightedyank'
         use 'tversteeg/registers.nvim'
@@ -99,6 +95,22 @@ require'packer'.startup{
         use 'itchyny/vim-gitbranch'
         use 'lambdalisue/gina.vim'
 
+        use 'mattn/emmet-vim'
+
+        use {
+            'gelguy/wilder.nvim',
+            config = [[require("rc.pluginconfig.wilder").config()]],
+            cond = [[nocode]],
+        }
+
+        -- denops
+        use {'vim-denops/denops.vim'}
+
+        use {
+            'vim-skk/denops-skkeleton.vim',
+            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/skkeleton.vim') end
+        }
+
         -- ddc
         use {
             'Shougo/ddc.vim',
@@ -111,13 +123,6 @@ require'packer'.startup{
         use 'shun/ddc-vim-lsp'
         use 'Shougo/ddc-nextword'
 
-        use 'mattn/emmet-vim'
-
-        use {
-            'gelguy/wilder.nvim',
-            config = [[require("rc.pluginconfig.wilder").config()]],
-            cond = [[nocode]],
-        }
     end
 }
 
