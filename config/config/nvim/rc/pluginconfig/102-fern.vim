@@ -8,6 +8,7 @@ nnoremap <silent>,t :<c-u>Fern . -drawer -stay -keep -toggle -reveal=%<cr>
 " fern open window config
 function! s:fern_setup() abort
 	nnoremap <buffer> <nowait> q :<c-u>quit<cr>
+    set nonumber
 	nmap <buffer>
 		\ <Plug>(fern-action-open)
 		\ <Plug>(fern-action-open:select)
