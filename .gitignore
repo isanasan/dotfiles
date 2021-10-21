@@ -2,6 +2,8 @@ config/config/lazydocker/
 config/config/lazygit/invite
 config/config/lazygit/php-tddbook
 config/config/lazygit/dotfiles
+config/config/lazygit/lancers_admin
+config/config/lazygit/lancers_batch
 config/config/configstore/
 config/config/composer/
 config/config/gh/
