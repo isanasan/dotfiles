@@ -4,3 +4,12 @@ gui:
       - reverse
     selectedRangeBgColor:
       - reverse
+customCommands:
+  - key: "N"
+    prompts:
+      - type: "input"
+        title: "What is the new orphan branch name?"
+        initialValue: ""
+    command: "git checkout --orphan {{index .PromptResponses 0}}"
+    context: "localBranches"
+    loadingText: "creating orphan branch"
