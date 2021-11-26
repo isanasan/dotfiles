@@ -7,14 +7,15 @@ $env:LESSCHARSET = "utf-8"
 
 Set-Alias touch New-Item
 Set-Alias grep Select-String
-Set-Alias d docker
+Set-Alias fr Select-LocalRepository
 
 function el() {explorer .}
 function pwdc() {Set-Clipboard "$pwd"}
 
 $env:LESSCHARSET = "utf-8"
 
-function Select-LocalRepository {
+function Select-LocalRepository
+{
     $project = (ghq list | fzf --header="Select a project")
 
     if ($project) {
@@ -33,21 +34,16 @@ function composer ($arg) {
     docker run --rm -it -v $PWD`:/app composer $arg
 }
 
-function fssh() {
-    $sshLoginHost=@()
-    $sshLoginHost="cat ~/.ssh/config | grep host | Out-String | %{ $_.Split' +'[2] } | fzf"
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadlineOption -HistoryNoDuplicates
+Set-PSReadlineOption -BellStyle None
+Set-PSReadlineOption -EditMode "Vi"
+Set-PSReadlineKeyHandler -Key "Ctrl+o" -Function "MenuComplete"
 
-    if ( $sshLoginHost -eq "" ) {
-    # ex) Ctrl-C.
-        return 1
-    }
-
-    ssh ${sshLoginHost}
-}
-
+Invoke-Expression (&starship init powershell)
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Paradox
+# Import-Module posh-git
+# Import-Module oh-my-posh
+# Set-Theme Paradox
 
