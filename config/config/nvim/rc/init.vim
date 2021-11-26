@@ -27,6 +27,16 @@ if has('nvim')
     let g:loaded_python_provider = 0
 endif
 
+if executable("rg")
+    let &grepprg = 'rg --vimgrep --hidden'
+    set grepformat=%f:%l:%c:%m
+endif
+
+augroup AutoQuickfix
+    autocmd!
+    autocmd QuickFixCmdPost *grep* cwindow
+augroup END
+
 set nocompatible
 set enc=utf-8
 if exists('&ambw')
