@@ -1,5 +1,9 @@
 vim.cmd[[packadd packer.nvim]]
 
+local nocode = function()
+  return vim.fn.exists('g:vscode') == 0
+end
+
 require'packer'.startup{
     function(use)
         use {'nvim-lua/popup.nvim'}
@@ -100,7 +104,7 @@ require'packer'.startup{
         use {
             'gelguy/wilder.nvim',
             config = [[require("rc.pluginconfig.wilder").config()]],
-            cond = [[nocode]],
+            cond = { nocode },
         }
 
         -- denops
@@ -125,8 +129,4 @@ require'packer'.startup{
 
     end
 }
-
-local nocode = function()
-  return vim.fn.exists('g:vscode') == 0
-end
 
