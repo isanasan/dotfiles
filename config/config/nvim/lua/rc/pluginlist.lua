@@ -126,7 +126,6 @@ require'packer'.startup{
         use 'Shougo/ddc-sorter_rank'
         use 'shun/ddc-vim-lsp'
         use 'Shougo/ddc-nextword'
-        use 'delphinus/ddc-treesitter'
         use {
             'matsui54/denops-popup-preview.vim',
             config = function() vim.cmd('call popup_preview#enable()') end
