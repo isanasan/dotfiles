@@ -14,6 +14,10 @@ vim.api.nvim_set_keymap('n','j','gj',
                         {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n','k','gk',
                         {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v','j','gj',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v','k','gk',
+                        {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n','Q',':confirm q!',
                         {noremap = true, silent = true})
 vim.api.nvim_set_keymap('','H','0',
