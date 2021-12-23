@@ -94,6 +94,12 @@ require'packer'.startup{
             "lukas-reineke/indent-blankline.nvim"
         }
 
+        use {
+            'akinsho/bufferline.nvim',
+            requires = 'kyazdani42/nvim-web-devicons',
+            config = [[require("rc.pluginconfig.bufferline").config()]],
+        }
+
         -- git
         use 'airblade/vim-gitgutter'
         use 'itchyny/vim-gitbranch'
