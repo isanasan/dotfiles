@@ -43,10 +43,7 @@ require'packer'.startup{
         }
 
         use {
-            'iamcco/markdown-preview.nvim',
-            ft = {'markdown'},
-            run =  'cd app && yarn install',
-            config = [[require("rc.pluginconfig.mkdp").config()]]
+            'kat0h/bufpreview.vim'
         }
 
        --telescope
