@@ -19,11 +19,11 @@ function Select-LocalRepository
     $project = (ghq list | fzf --header="Select a project")
 
     if ($project) {
-          $splitted = $project -Split "/"
-          return "$($splitted[1])/$($splitted[2])"
-        } else {
-          return ""
+        $splitted = $project -Split "/"
+        Set-Location -Path "$(ghq root)\github.com\$($splitted[1])\$($splitted[2])"
     }
+
+    return
 }
 
 function phpunit ($dir = "/app/tests") { 
@@ -39,6 +39,11 @@ Set-PSReadlineOption -HistoryNoDuplicates
 Set-PSReadlineOption -BellStyle None
 Set-PSReadlineOption -EditMode "Vi"
 Set-PSReadlineKeyHandler -Key "Ctrl+o" -Function "MenuComplete"
+Set-PSReadLineKeyHandler -key "Ctrl+]" -ScriptBlock {
+    Select-LocalRepository
+    [Microsoft.PowerShell.PSConsoleReadLine]::ClearScreen()
+}
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 Invoke-Expression (&starship init powershell)
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
