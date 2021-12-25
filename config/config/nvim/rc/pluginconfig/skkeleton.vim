@@ -1,5 +1,5 @@
-imap <C-j> <Plug>(skkeleton-enable)
-cmap <C-j> <Plug>(skkeleton-enable)
+imap <C-j> <Plug>(skkeleton-toggle)
+cmap <C-j> <Plug>(skkeleton-toggle)
 
 call skkeleton#config({
 \ 'globalJisyo': expand('~/.eskk/SKK-JISYO.L'),
