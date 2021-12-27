@@ -128,7 +128,6 @@ require'packer'.startup{
         use 'Shougo/ddc-matcher_head'
         use 'Shougo/ddc-sorter_rank'
         use 'shun/ddc-vim-lsp'
-        use 'Shougo/ddc-nextword'
         use 'LumaKernel/ddc-file'
         use {
             'matsui54/denops-popup-preview.vim',

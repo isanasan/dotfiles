@@ -1,4 +1,4 @@
-call ddc#custom#patch_global('sources', ['vim-lsp','file','around','nextword'])
+call ddc#custom#patch_global('sources', ['vim-lsp','file','around'])
 call ddc#custom#patch_global('sourceOptions', {
      \ 'vim-lsp': {'mark': 'LSP','minAutoCompleteLength': 0},
      \ 'file': {
@@ -7,7 +7,6 @@ call ddc#custom#patch_global('sourceOptions', {
      \   'forceCompletionPattern': '\S/\S*',
      \ },
      \ 'around': {'mark': 'A'},
-     \ 'nextword': {'mark': 'nextword','minAutoCompleteLength': 3},
      \ '_': {
      \   'matchers': ['matcher_head'],
      \   'sorters': ['sorter_rank']},
