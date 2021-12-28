@@ -16,16 +16,14 @@ let g:loaded_netrw             = 1
 let g:loaded_netrwPlugin       = 1
 let g:loaded_netrwSettings     = 1
 let g:loaded_netrwFileHandlers = 1
+let g:loaded_ruby_provider     = 0
+let g:loaded_node_provider     = 0
+let g:loaded_perl_provider     = 0
+let g:loaded_python_provider   = 0
+let g:loaded_python3_provider  = 0
 
 setglobal fileformat=unix
 setglobal formatoptions+=mb
-
-if has('nvim')
-    if has('win32')
-        let g:python3_host_prog = 'C:\Users\im000556\AppData\Local\Programs\Python\Python39\python.exe'
-    endif
-    let g:loaded_python_provider = 0
-endif
 
 if executable("rg")
     let &grepprg = 'rg --vimgrep --hidden'
