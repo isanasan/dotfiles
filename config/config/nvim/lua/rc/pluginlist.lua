@@ -29,7 +29,6 @@ require'packer'.startup{
         use 'unblevable/quick-scope'
 
         use 'cocopon/iceberg.vim'
-        use 'ulwlu/elly.vim'
         use {
             'itchyny/lightline.vim',
             config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/200-lightline.vim') end
@@ -43,7 +42,7 @@ require'packer'.startup{
         }
 
         use {
-            'kat0h/bufpreview.vim'
+            'kat0h/bufpreview.vim',
         }
 
        --telescope
