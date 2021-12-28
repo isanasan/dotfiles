@@ -4,9 +4,8 @@ function! s:on_lsp_buffer_enabled() abort
 	nmap <buffer> gd <plug>(lsp-definition)
     nmap <buffer> gr <plug>(lsp-references)
 	nmap <buffer> <f2> <plug>(lsp-rename)
+    nnoremap <silent> K :LspHover <CR>
     nnoremap <silent> ,f :LspDocumentFormatSync <CR>
-	" inoremap <expr><Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
-	" inoremap <expr><CR> pumvisible() ? "\<C-p>\<CR>\<C-f>" : "\<CR>"
 
 	autocmd BufWritePre <buffer>
 				\ call execute('LspCodeActionSync source.organizeImports')
