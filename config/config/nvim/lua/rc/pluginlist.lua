@@ -12,7 +12,7 @@ require'packer'.startup{
         use {'wbthomason/packer.nvim', opt = true}
 
         use {
-            'ggandor/lightspeed.nvim',
+            'rhysd/clever-f.vim',
         }
 
         use {
