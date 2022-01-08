@@ -1,5 +1,9 @@
-call ddc#custom#patch_global('sources', ['vim-lsp','file','around'])
+call ddc#custom#patch_global('sources', ['vsnip','vim-lsp','file','around'])
 call ddc#custom#patch_global('sourceOptions', {
+     \ 'vsnip': {
+     \   'mark': 'VSNIP',
+     \   'isVolatile': v:true,
+     \ },
      \ 'vim-lsp': {'mark': 'LSP','minAutoCompleteLength': 0},
      \ 'file': {
      \   'mark': 'F',

@@ -69,6 +69,15 @@ require'packer'.startup{
         use 'mattn/vim-lsp-settings'
         use 'mattn/vim-lsp-icons'
 
+        use {
+            'hrsh7th/vim-vsnip',
+            config = [[require("rc.pluginconfig.vsnip").config()]]
+        }
+
+        use {
+            'hrsh7th/vim-vsnip-integ',
+        }
+
         -- others
         use {'cohama/lexima.vim',event = 'InsertEnter *'}
 

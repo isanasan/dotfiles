@@ -1,0 +1,243 @@
+{
+    "phpdoc": {
+        "prefix": "doc",
+        "body": [
+            "/**",
+            " * @${1:Tag} ${2:Type} \\$${3:args}",
+            " */"
+        ]
+    },
+    "Class constructor": {
+    "prefix": "pubc",
+    "body": [
+        "public function __construct(${1:Type} \\$${2:args})",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Class public constructor block"
+    },
+    "Class private constructor": {
+    "prefix": "pric",
+    "body": [
+        "private function __construct(${1:Type} \\$${2:args})",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Class private constructor block"
+    },
+    "Class protected constructor": {
+    "prefix": "proc",
+    "body": [
+        "protected function __construct(${1:Type} \\$${2:args})",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Class protected constructor block"
+    },
+    "Private method": {
+    "prefix": "prif",
+    "body": [
+        "private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Private method block"
+    },
+    "Private static method": {
+    "prefix": "prisf",
+    "body": [
+        "private static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Private static method block"
+    },
+    "Final private method": {
+    "prefix": "fprif",
+    "body": [
+        "final private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Final private method block"
+    },
+    "Final private static method": {
+    "prefix": "fprisf",
+    "body": [
+        "final private static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Final private static method block"
+    },
+    "Protected method": {
+    "prefix": "prof",
+    "body": [
+        "protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Protected method block"
+    },
+    "Protected static method": {
+    "prefix": "prosf",
+    "body": [
+        "protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Protected static method block"
+    },
+    "Final protected method": {
+    "prefix": "fprof",
+    "body": [
+        "final protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Final protected method block"
+    },
+    "Final protected static method": {
+    "prefix": "fprosf",
+    "body": [
+        "final protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Final protected static method block"
+    },
+    "Abstract protected method": {
+    "prefix": "aprof",
+    "body": [
+        "abstract protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+    ],
+    "description": "Abstract protected method statement"
+    },
+    "Abstract protected static method": {
+    "prefix": "aprosf",
+    "body": [
+        "abstract protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+    ],
+    "description": "Abstract protected static method statement"
+    },
+    "Public method": {
+    "prefix": "pubf",
+    "body": [
+        "public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Public method block"
+    },
+    "Public static method": {
+    "prefix": "pubsf",
+    "body": [
+        "public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Public static method block"
+    },
+    "Final public method": {
+    "prefix": "fpubf",
+    "body": [
+        "final public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Final public method block"
+    },
+    "Final public static method": {
+    "prefix": "fpubsf",
+    "body": [
+        "final public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+        "{",
+        "\t${0:# code...}",
+        "}"
+    ],
+    "description": "Final public static method block"
+    },
+    "Abstract public method": {
+    "prefix": "apubf",
+    "body": [
+        "abstract public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+    ],
+    "description": "Abstract public method statement"
+    },
+    "Abstract public static method": {
+    "prefix": "apubsf",
+    "body": [
+        "abstract public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+    ],
+    "description": "Abstract public static method statement"
+    },
+    "Function": {
+        "prefix": "fn",
+        "body": [
+            "function ${1:func_name}(${2:Type} \\$${3:args}): ${4:void} {",
+            "\t${0:# code...}",
+            "}"
+        ],
+        "description": "Function block"
+    },
+    "Anonymous function": {
+        "prefix": "fna",
+        "body": [
+            "function (${1:Type} \\$${2:args}): ${3:void} {",
+            "\t${0:# code...}",
+            "}"
+        ],
+        "description": "Anonymous function block"
+    },
+    "Anonymous function ... use": {
+        "prefix": "fnu",
+        "body": [
+            "function (${1:Type} \\$${2:args}) use (\\$${3:vars}): ${4:void} {",
+            "\t${0:# code...}",
+            "}"
+        ],
+        "description": "Anonymous function with use block"
+    },
+    "PHP tags": {
+        "prefix": "php",
+        "body": [
+            "<?php $0?>"
+        ],
+        "description": "PHP open tag"
+    },
+    "PHP open tag": {
+        "prefix": "po",
+        "body": [
+            "<?php"
+        ],
+        "description": "PHP open tag"
+    },
+    "PHP close tag": {
+        "prefix": "pc",
+        "body": [
+            "?>"
+        ],
+        "description": "PHP close tag"
+    },
+    "PHP echo short tag": {
+        "prefix": "peco",
+        "body": [
+            "<?= \\$${1:variable} ?>"
+        ],
+        "description": "PHP echo short tag"
+    }
+}
