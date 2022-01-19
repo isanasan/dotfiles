@@ -21,7 +21,8 @@ require'packer'.startup{
         }
         use {
             'Shougo/deol.nvim',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/103-deol.vim') end
+            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/103-deol.vim') end,
+            cond = { nocode },
         }
         use 'thinca/vim-quickrun'
 
@@ -48,7 +49,8 @@ require'packer'.startup{
        --telescope
         use {
             'nvim-telescope/telescope.nvim',
-            config = function() require 'rc/pluginconfig/telescope' end
+            config = function() require 'rc/pluginconfig/telescope' end,
+            cond = { nocode },
         }
 
         -- filetree
@@ -64,9 +66,13 @@ require'packer'.startup{
         --vimlsp
         use {
             'prabirshrestha/vim-lsp',
-            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/lsp.vim') end
+            config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/lsp.vim') end,
+            cond = { nocode },
         }
-        use 'mattn/vim-lsp-settings'
+        use {
+            'mattn/vim-lsp-settings',
+            cond = { nocode },
+        }
         use 'mattn/vim-lsp-icons'
 
         use {
