@@ -17,6 +17,12 @@ function Select-LocalRepository
     return
 }
 
+function de
+{
+    docker exec -it $(docker ps --format "{{.Names}}" | fzf) bash
+    return
+}
+
 function composer ($arg) {
     docker run --rm -it -v $PWD`:/app composer $arg
 }
@@ -33,5 +39,6 @@ Set-PSReadLineKeyHandler -key "Ctrl+]" -ScriptBlock {
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 Invoke-Expression (&starship init powershell)
+Invoke-Expression -Command $(gh completion -s powershell | Out-String)
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
