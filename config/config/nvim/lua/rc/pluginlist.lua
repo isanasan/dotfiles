@@ -144,8 +144,8 @@ require'packer'.startup{
         use 'shun/ddc-vim-lsp'
         use 'LumaKernel/ddc-file'
         use {
-            'matsui54/denops-popup-preview.vim',
-            config = function() vim.cmd('call popup_preview#enable()') end
+            'matsui54/denops-signature_help',
+            config = [[require("rc.pluginconfig.denops-signature_help").config()]],
         }
 
     end
