@@ -1,9 +1,9 @@
 local M = {}
 
     function M.config()
-        vim.api.nvim_set_keymap('n',"[b",":BufferLineCycleNext<CR>",
+        vim.api.nvim_set_keymap('n',"[b",":BufferLineCyclePrev<CR>",
             {noremap = true,silent = true})
-        vim.api.nvim_set_keymap('n',"]b",":BufferLineCyclePrev<CR>",
+        vim.api.nvim_set_keymap('n',"]b",":BufferLineCycleNext<CR>",
             {noremap = true,silent = true})
 
         require('bufferline').setup {
