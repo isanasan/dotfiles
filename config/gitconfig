@@ -4,7 +4,8 @@
 [core]
     autoCRLF = false
     editor = nvim
-        filemode = false
+    filemode = false
+    ignorecase = false
 [url "https://ef50c65e74790a43d85cb65a405f42e09ca3295a:x-oauth-basic@github.com/"]
     insteadOf = https://github.com/
 [init]
@@ -30,5 +31,5 @@
 [commit]
     verbose = true
 [credential "https://github.com"]
-        helper =
-        helper = !/usr/bin/gh auth git-credential
+    helper =
+    helper = !/usr/bin/gh auth git-credential
