@@ -141,6 +141,7 @@ require'packer'.startup{
         use 'Shougo/ddc-around'
         use 'Shougo/ddc-matcher_head'
         use 'Shougo/ddc-sorter_rank'
+        use 'tani/ddc-fuzzy'
         use 'shun/ddc-vim-lsp'
         use 'LumaKernel/ddc-file'
         use {

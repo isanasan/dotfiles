@@ -12,8 +12,8 @@ call ddc#custom#patch_global('sourceOptions', {
      \ },
      \ 'around': {'mark': 'A'},
      \ '_': {
-     \   'matchers': ['matcher_head'],
-     \   'sorters': ['sorter_rank']},
+     \   'matchers': ['matcher_fuzzy'],
+     \   'sorters': ['sorter_fuzzy']},
      \ })
 call ddc#custom#patch_filetype(
     \ ['ps1', 'dosbatch', 'autohotkey', 'registry'], {
