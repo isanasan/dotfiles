@@ -30,16 +30,16 @@ call ddc#custom#patch_filetype(
 call ddc#enable()
 
 autocmd User skkeleton-enable-pre call s:skkeleton_pre()
-    function! s:skkeleton_pre() abort
-        " Overwrite sources
-        let s:prev_buffer_config = ddc#custom#get_buffer()
-        call ddc#custom#patch_buffer('sources', ['skkeleton'])
-        call ddc#custom#patch_buffer('sourceOptions', { 'vim-lsp': {'mark': 'SKK','minAutoCompleteLength': 0}}
-    endfunction
+function! s:skkeleton_pre() abort
+    " Overwrite sources
+    let s:prev_buffer_config = ddc#custom#get_buffer()
+    call ddc#custom#patch_buffer('sources', ['skkeleton'])
+    call ddc#custom#patch_buffer('sourceOptions', {'skkeleton': {'mark': 'SKK','minAutoCompleteLength': 0}})
+endfunction
 
 autocmd User skkeleton-disable-pre call s:skkeleton_post()
-    function! s:skkeleton_post() abort
-        " Restore sources
-        call ddc#custom#set_buffer(s:prev_buffer_config)
-    endfunction
+function! s:skkeleton_post() abort
+    " Restore sources
+    call ddc#custom#set_buffer(s:prev_buffer_config)
+endfunction
 
