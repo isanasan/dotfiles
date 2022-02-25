@@ -97,6 +97,30 @@ set laststatus=2
 set listchars=tab:^\ ,trail:~
 syntax enable
 set termguicolors
+
+function! s:filetype()
+    unlet g:terminal_color_0
+    unlet g:terminal_color_1
+    unlet g:terminal_color_2
+    unlet g:terminal_color_3
+    unlet g:terminal_color_4
+    unlet g:terminal_color_5
+    unlet g:terminal_color_6
+    unlet g:terminal_color_7
+    unlet g:terminal_color_8
+    unlet g:terminal_color_9
+    unlet g:terminal_color_10
+    unlet g:terminal_color_11
+    unlet g:terminal_color_12
+    unlet g:terminal_color_13
+    unlet g:terminal_color_14
+    unlet g:terminal_color_15
+endfunction
+
+augroup my-terminal
+    au!
+    au ColorScheme * call s:filetype()
+augroup END
 colorscheme iceberg
 " colorscheme elly
 set bg=dark
@@ -122,7 +146,3 @@ set completeopt=menuone,noinsert
 set diffopt+=vertical
 set splitright
 
-" augroup iceberg
-"     au!
-"     au ColorScheme * unlet g:terminal_ansi_colors
-" augroup END
