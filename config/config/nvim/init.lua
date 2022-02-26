@@ -1,6 +1,6 @@
 -- Plugins
-require 'rc/pluginlist'
-require 'rc/keymaps'
+require 'pluginlist'
+require 'keymaps'
 
 vim.cmd('source ~/.config/nvim/rc/init.vim')
 vim.cmd([[

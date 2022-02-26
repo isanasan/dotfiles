@@ -16,7 +16,7 @@ require'packer'.startup({function(use)
 
     use {
         'nvim-treesitter/nvim-treesitter',
-        config = [[require("rc.pluginconfig.treesitter").config()]]
+        config = [[require("pluginconfig.treesitter").config()]]
     }
 
     use 'thinca/vim-quickrun'
@@ -34,7 +34,7 @@ require'packer'.startup({function(use)
     use {
         'plasticboy/vim-markdown',
         ft = {'markdown'},
-        config = [[require("rc.pluginconfig.markdown").config()]]
+        config = [[require("pluginconfig.markdown").config()]]
     }
 
     use {
@@ -45,7 +45,7 @@ require'packer'.startup({function(use)
     use 'lambdalisue/nerdfont.vim'
     use {
         'lambdalisue/fern.vim',
-        config = [[require("rc.pluginconfig.fern").config()]]
+        config = [[require("pluginconfig.fern").config()]]
     }
     use 'lambdalisue/fern-renderer-nerdfont.vim'
     use 'lambdalisue/glyph-palette.vim'
@@ -55,7 +55,7 @@ require'packer'.startup({function(use)
 
     use {
         'hrsh7th/vim-vsnip',
-        config = [[require("rc.pluginconfig.vsnip").config()]]
+        config = [[require("pluginconfig.vsnip").config()]]
     }
 
     use {
@@ -67,7 +67,7 @@ require'packer'.startup({function(use)
 
     use {
         'tyru/caw.vim',
-        config = [[require("rc.pluginconfig.caw").config()]]
+        config = [[require("pluginconfig.caw").config()]]
     }
 
     use 'skanehira/gyazo.vim'
@@ -86,7 +86,7 @@ require'packer'.startup({function(use)
     use {
         'akinsho/bufferline.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
-        config = [[require("rc.pluginconfig.bufferline").config()]],
+        config = [[require("pluginconfig.bufferline").config()]],
     }
 
     -- git
@@ -118,7 +118,7 @@ require'packer'.startup({function(use)
     use 'LumaKernel/ddc-file'
     use {
         'matsui54/denops-signature_help',
-        config = [[require("rc.pluginconfig.denops-signature_help").config()]],
+        config = [[require("pluginconfig.denops-signature_help").config()]],
     }
 
     use {
@@ -130,7 +130,7 @@ require'packer'.startup({function(use)
    --telescope
     use {
         'nvim-telescope/telescope.nvim',
-        config = function() require 'rc/pluginconfig/telescope' end,
+        config = function() require 'pluginconfig/telescope' end,
         cond = { nocode },
     }
     --vimlsp
@@ -146,7 +146,7 @@ require'packer'.startup({function(use)
 
     use {
         'gelguy/wilder.nvim',
-        config = [[require("rc.pluginconfig.wilder").config()]],
+        config = [[require("pluginconfig.wilder").config()]],
         cond = { nocode },
     }
 end})
