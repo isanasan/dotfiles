@@ -2,9 +2,9 @@ local M = {}
 
     function M.config()
 
-    vim.cmd([[
-        let g:vsnip_snippet_dir = expand('~/.config/vsnip')
+    vim.g.vsnip_snippet_dir = vim.fn.expand('~/.config/vsnip')
 
+    vim.cmd([[
         " Jump forward or backward
         imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
         smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
