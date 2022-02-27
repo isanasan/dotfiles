@@ -9,6 +9,8 @@ if has('win32')
 endif
 
 nnoremap <silent> [deol]b :<C-u>Deol<CR>
+nnoremap <silent> [deol]l :<C-u>Deol -toggle lazygit.exe<CR>
+tnoremap <silent> <a-l> <c-\><c-n>
 
 let g:deol#custom_map = {
 \ 'edit': 'e',
