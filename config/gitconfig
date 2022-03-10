@@ -1,18 +1,16 @@
 [user]
-    name = default
-    email = default@default.com
+    name = isanasan
+    email = yfcgpsebp@gmail.com
 [core]
     autoCRLF = false
     editor = nvim
     filemode = false
-    ignorecase = false
-[url "https://ef50c65e74790a43d85cb65a405f42e09ca3295a:x-oauth-basic@github.com/"]
-    insteadOf = https://github.com/
+    sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 [init]
     defaultBranch = main
 [diff]
     tool = nvimdiff
-	algorithm = histogram
+    algorithm = histogram
 [difftool "nvimdiff"]
     cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
 [mergetool "nvimdiff"]
@@ -31,5 +29,7 @@
 [commit]
     verbose = true
 [credential "https://github.com"]
-    helper =
     helper = !/usr/bin/gh auth git-credential
+[url "git@github.com:"]
+    pushInsteadOf = https://github.com/
+
