@@ -23,6 +23,12 @@ function de
     return
 }
 
+function dr
+{
+    docker rm -f $(docker ps --format "{{.Names}}" | fzf)
+    return
+}
+
 function composer ($arg) {
     docker run --rm -it -v $PWD`:/app composer $arg
 }
