@@ -33,3 +33,7 @@
 [url "git@github.com:"]
     pushInsteadOf = https://github.com/
 
+[scalar]
+	repo = C:/Users/miyake.isana/www/lancers
+[maintenance]
+	repo = C:/Users/miyake.isana/www/lancers
