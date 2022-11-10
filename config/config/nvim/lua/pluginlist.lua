@@ -45,7 +45,8 @@ require'packer'.startup({function(use)
     use 'lambdalisue/nerdfont.vim'
     use {
         'lambdalisue/fern.vim',
-        config = [[require("pluginconfig.fern").config()]]
+        config = [[require("pluginconfig.fern").config()]],
+        branch = 'main'
     }
     use 'lambdalisue/fern-renderer-nerdfont.vim'
     use 'lambdalisue/glyph-palette.vim'
