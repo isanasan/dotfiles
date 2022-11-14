@@ -5,7 +5,6 @@
     autoCRLF = false
     editor = nvim
     filemode = false
-    sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 [init]
     defaultBranch = main
 [diff]
