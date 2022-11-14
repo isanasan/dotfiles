@@ -28,7 +28,7 @@
 [commit]
     verbose = true
 [credential "https://github.com"]
-    helper = !/usr/bin/gh auth git-credential
+    helper = !gh auth git-credential
 [url "git@github.com:"]
     pushInsteadOf = https://github.com/
 
