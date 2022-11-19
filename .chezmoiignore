@@ -2,3 +2,4 @@ readme.md
 config/
 bin/
 LICENSE
+setup.sh
