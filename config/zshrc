@@ -43,12 +43,12 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-setopt HIST_IGNORE_DUPS           # $BA0$H=EJ#$9$k9T$O5-O?$7$J$$(B
-setopt HIST_IGNORE_ALL_DUPS       # $BMzNrCf$N=EJ#9T$r%U%!%$%k5-O?A0$KL5$/$9(B
-setopt HIST_IGNORE_SPACE          # $B9TF,$,%9%Z!<%9$N%3%^%s%I$O5-O?$7$J$$(B
-setopt HIST_FIND_NO_DUPS          # $BMzNr8!:wCf!"(B($BO"B3$7$F$J$/$H$b(B)$B=EJ#$rHt$P$9(B
-setopt HIST_REDUCE_BLANKS         # $BM>J,$J6uGr$O5M$a$F5-O?(B
-setopt HIST_NO_STORE              # histroy$B%3%^%s%I$O5-O?$7$J$$(B
+setopt HIST_IGNORE_DUPS           # 直前と同じコマンドラインはヒストリに追加しない
+setopt HIST_IGNORE_ALL_DUPS       # 重複するコマンド行は古い方を削除
+setopt HIST_IGNORE_SPACE          # 先頭に半角スペースを入れたコマンドは履歴に登録しない
+setopt HIST_FIND_NO_DUPS          # 履歴検索中、(連続してなくとも)重複を飛ばす
+setopt HIST_REDUCE_BLANKS         # 余分な空白は詰めて記録
+setopt HIST_NO_STORE              # historyコマンドは履歴に登録しない
 
 fssh() {
     local sshLoginHost
