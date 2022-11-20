@@ -24,6 +24,8 @@ brew install fzf
 
 brew install ripgrep
 
+brew install starship
+
 brew install cask
 
 brew install --cask raycast
