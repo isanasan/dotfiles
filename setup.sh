@@ -56,6 +56,8 @@ gh extension install jongio/gh-setup-git-credential-helper
 
 gh extension install kawarimidoll/gh-q 
 
+gh extension install dlvhdr/gh-dash
+
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
