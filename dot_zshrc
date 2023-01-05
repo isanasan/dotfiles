@@ -1,5 +1,6 @@
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(nodenv init -)"
 
 export DENO_INSTALL="/Users/miyake.isana/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
