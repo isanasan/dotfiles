@@ -20,6 +20,7 @@ config/config/gatsby
 config/vimfiles/minivimrc
 config/config/nextword/
 config/config/nvim/plugin/packer_compiled.lua
+private_dot_config/nvim/plugin/packer_compiled.lua
 
 config/config/lazygit/state.yml
 authors.json
