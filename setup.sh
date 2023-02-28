@@ -30,6 +30,18 @@ brew install starship
 
 brew install node
 
+brew install git-secrets
+
+brew install circleci
+
+brew install go
+
+brew install terraform
+
+brew install ripgrep
+
+brew install jq
+
 brew install cask
 
 brew install --cask raycast
@@ -56,6 +68,8 @@ brew install --cask phpstorm
 
 brew install --cask datagrip
 
+brew install --cask discord
+
 gh extension install jongio/gh-setup-git-credential-helper
 
 gh extension install kawarimidoll/gh-q 
@@ -67,4 +81,3 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
 gh setup-git-credential-helper
-
