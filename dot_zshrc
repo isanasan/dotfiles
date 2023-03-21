@@ -29,7 +29,7 @@ fssh() {
     ssh ${sshLoginHost}
 }
 
-function cd_ghq_list() {
+cd_ghq_list() {
     local destination_dir="$(ghq list | fzf)"
     if [ -n "$destination_dir" ]; then
         local ghq_root="$(ghq root)"
