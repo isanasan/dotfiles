@@ -17,7 +17,8 @@ setopt HIST_FIND_NO_DUPS          # 履歴検索中、(連続してなくとも)
 setopt HIST_REDUCE_BLANKS         # 余分な空白は詰めて記録
 setopt HIST_NO_STORE              # historyコマンドは履歴に登録しない
 
-fssh() {
+alias fssh='_ssh_select_host_from_fzf'
+_ssh_select_host_from_fzf() {
     local sshLoginHost
     sshLoginHost=`cat ~/.ssh/config | grep -i ^host | awk '{print $2}' | fzf`
 
