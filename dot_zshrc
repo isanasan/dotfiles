@@ -30,16 +30,15 @@ _ssh_select_host_from_fzf() {
     ssh "$sshLoginHost"
 }
 
-cd_ghq_list() {
-    local destination_dir=$(ghq list | fzf)
-    if [[ -n $destination_dir ]]; then
-        local ghq_root=$(ghq root)
-        builtin cd "${ghq_root}/${destination_dir}"
+alias fgh='_cd_select_repo_from_fzf'
+_cd_select_repo_from_fzf() {
+    local destination_dir="$(ghq list | fzf)"
+    if [ -n "$destination_dir" ]; then
+        local ghq_root="$(ghq root)"
+        cd "$ghq_root/$destination_dir"
     fi
-    zle clear-screen
+    clear
 }
-zle -N cd_ghq_list
-bindkey '^]' cd_ghq_list
 
 alias dc='docker compose'
 alias gq='ghq'
