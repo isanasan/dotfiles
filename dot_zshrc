@@ -20,22 +20,21 @@ setopt HIST_NO_STORE              # historyコマンドは履歴に登録しな�
 alias fssh='_ssh_select_host_from_fzf'
 _ssh_select_host_from_fzf() {
     local sshLoginHost
-    sshLoginHost=`cat ~/.ssh/config | grep -i ^host | awk '{print $2}' | fzf`
+    sshLoginHost=$(cat ~/.ssh/config | grep -i ^host | awk '{print $2}' | fzf)
 
-    if [ "$sshLoginHost" = "" ]; then
+    if [ -z "$sshLoginHost" ]; then
         # ex) Ctrl-C.
         return 1
     fi
 
-    ssh ${sshLoginHost}
+    ssh "$sshLoginHost"
 }
 
 cd_ghq_list() {
-    local destination_dir="$(ghq list | fzf)"
-    if [ -n "$destination_dir" ]; then
-        local ghq_root="$(ghq root)"
-        BUFFER="cd  $ghq_root/$destination_dir"
-        zle accept-line
+    local destination_dir=$(ghq list | fzf)
+    if [[ -n $destination_dir ]]; then
+        local ghq_root=$(ghq root)
+        builtin cd "${ghq_root}/${destination_dir}"
     fi
     zle clear-screen
 }
