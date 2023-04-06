@@ -40,6 +40,20 @@ _cd_select_repo_from_fzf() {
     clear
 }
 
+alias de='_fuzzy_docker_exec'
+_fuzzy_docker_exec() {
+  local container_name
+  container_name=$(docker ps --format "{{.Names}}" | fzf)
+  [[ -n $container_name ]] && docker exec -it "$container_name" bash
+}
+
+alias dr='_fuzzy_docker_remove'
+_fuzzy_docker_remove() {
+  local container_name
+  container_name=$(docker ps --format "{{.Names}}" | fzf)
+  [[ -n $container_name ]] && docker rm -f "$container_name"
+}
+
 alias dc='docker compose'
 alias gq='ghq'
 alias composer='docker run --rm -it -v $(pwd):/app -u $(id -u):$(id -g) composer/composer'
