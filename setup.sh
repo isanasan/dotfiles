@@ -42,6 +42,8 @@ brew install ripgrep
 
 brew install jq
 
+brew install git-delta
+
 brew install cask
 
 brew install --cask raycast
