@@ -36,7 +36,7 @@ brew install circleci
 
 brew install go
 
-brew install terraform
+brew install tfenv
 
 brew install ripgrep
 
