@@ -2,7 +2,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(nodenv init -)"
 
-export DENO_INSTALL="/Users/miyake.isana/.deno"
+export DENO_INSTALL="/Users/$(whoami)/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
