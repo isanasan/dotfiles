@@ -66,6 +66,8 @@ brew install --cask datagrip
 
 brew install --cask discord
 
+brew install --cask authy
+
 gh extension install jongio/gh-setup-git-credential-helper
 
 gh extension install kawarimidoll/gh-q 
