@@ -36,6 +36,8 @@ brew install jq
 
 brew install git-delta
 
+brew install astro
+
 brew install cask
 
 brew install --cask raycast
