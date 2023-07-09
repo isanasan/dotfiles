@@ -68,6 +68,8 @@ brew install --cask discord
 
 brew install --cask authy
 
+brew install --cask aquaskk
+
 gh extension install jongio/gh-setup-git-credential-helper
 
 gh extension install kawarimidoll/gh-q 
