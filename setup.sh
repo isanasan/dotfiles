@@ -20,7 +20,7 @@ brew install ripgrep
 
 brew install starship
 
-brew install node
+brew install nodenv
 
 brew install git-secrets
 
