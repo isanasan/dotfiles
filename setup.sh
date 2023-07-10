@@ -76,6 +76,11 @@ gh extension install kawarimidoll/gh-q 
 
 gh extension install dlvhdr/gh-dash
 
+brew tap homebrew/cask-fonts
+brew install font-plemol-jp
+brew install font-plemol-jp-nf
+brew install font-plemol-jp-hs
+
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
