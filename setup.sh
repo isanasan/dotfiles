@@ -40,6 +40,8 @@ brew install astro
 
 brew install cask
 
+brew install --cask docker
+
 brew install --cask raycast
 
 brew install --cask amethyst
