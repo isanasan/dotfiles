@@ -38,6 +38,8 @@ brew install git-delta
 
 brew install astro
 
+brew install stern
+
 brew install cask
 
 brew install --cask docker
