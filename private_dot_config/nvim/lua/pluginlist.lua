@@ -118,6 +118,7 @@ require'packer'.startup({function(use)
     use 'tani/ddc-fuzzy'
     use 'shun/ddc-vim-lsp'
     use 'LumaKernel/ddc-file'
+    use 'uga-rosa/ddc-source-vsnip'
     use {
         'matsui54/denops-signature_help',
         config = [[require("pluginconfig.denops-signature_help").config()]],
