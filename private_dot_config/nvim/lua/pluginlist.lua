@@ -108,7 +108,8 @@ require'packer'.startup({function(use)
     -- ddc
     use {
         'Shougo/ddc.vim',
-        config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/100-ddc.vim') end
+        config = function() vim.cmd('source ~/.config/nvim/rc/pluginconfig/100-ddc.vim') end,
+        cond = { nocode },
     }
 
     use 'Shougo/ddc-around'
