@@ -54,8 +54,6 @@ brew install --cask obsidian
 
 brew install --cask alt-tab
 
-brew install --cask karabiner-elements
-
 brew install --cask slack
 
 brew install --cask chrysalis
@@ -64,17 +62,11 @@ brew install --cask notion
 
 brew install --cask warp
 
-brew install --cask phpstorm
-
-brew install --cask datagrip
-
 brew install --cask discord
 
 brew install --cask authy
 
 brew install --cask aquaskk
-
-gh extension install jongio/gh-setup-git-credential-helper
 
 gh extension install kawarimidoll/gh-q 
 
@@ -88,5 +80,3 @@ brew install font-plemol-jp-hs
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
-
-gh setup-git-credential-helper
