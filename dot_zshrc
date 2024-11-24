@@ -1,10 +1,5 @@
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(nodenv init -)"
-
-# deno
-export DENO_INSTALL="/Users/$(whoami)/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
 
 # go
 export GOPATH=$HOME/go
@@ -65,8 +60,6 @@ alias gq='ghq'
 alias composer='docker run --rm -it -v $(pwd):/app -u $(id -u):$(id -g) composer/composer'
 alias oas='docker run --rm -v "$(pwd):/local" openapitools/openapi-generator-cli'
 alias l='lazygit'
-
-eval "$(gh completion -s zsh)"
 
 eval "$(starship init zsh)"
 
