@@ -6,6 +6,11 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+# aqua
+export PATH="$(aqua root-dir)/bin:$PATH"
+export NPM_CONFIG_PREFIX=${XDG_DATA_HOME:-$HOME/.local/share}/npm-global
+export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
+
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000

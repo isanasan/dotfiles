@@ -10,6 +10,8 @@ brew install lazygit
 
 brew install gh
 
+brew install aquaproj/aqua/aqua
+
 brew install nvim
 
 brew install awscli
