@@ -62,7 +62,7 @@ brew install --cask authy
 
 brew install --cask aquaskk
 
-gh extension install kawarimidoll/gh-q 
+gh extension install kawarimidoll/gh-q
 
 gh extension install dlvhdr/gh-dash
 
